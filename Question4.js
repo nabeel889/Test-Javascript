@@ -15,11 +15,11 @@ function printDiamond(n) {
 
 printDiamond(4);
 
-function printHollowRectangle(rows, cols) {
-  for (let i = 1; i <= rows; i++) {
+function drawHollowRectangle(width, height) {
+  for (let i = 0; i < height; i++) {
     let row = "";
-    for (let j = 1; j <= cols; j++) {
-      if (i === 1 || i === rows || j === 1 || j === cols) {
+    for (let j = 0; j < width; j++) {
+      if (i === 0 || i === height - 1 || j === 0 || j === width - 1) {
         row += "*";
       } else {
         row += " ";
@@ -29,4 +29,5 @@ function printHollowRectangle(rows, cols) {
   }
 }
 
-printHollowRectangle(5, 10);
+
+drawHollowRectangle(10, 5);
